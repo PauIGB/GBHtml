@@ -1,1 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+main {
+    padding: 0 40px;    
+}
+nav li{
+    list-style-type: none;
+    display: inline-block;
+}
