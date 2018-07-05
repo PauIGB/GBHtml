@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
 body {    
-    background: #f8f8f8;   
+    background: #f8f8f8; 
 }
 body, select, input, textarea {
     font-family: 'Open Sans', sans-serif;
@@ -14,21 +14,23 @@ html, body, .wrapper {
     box-sizing: border-box;
     padding-bottom: 36px;
 }
-header {
-    border-bottom: 1px solid #333;
+header {    
+    background:rgba(212, 231, 238, 0.8);
+    border-bottom: 1px solid #adc0ce; 
 }
 main {
-    padding: 0 70px;
+    padding: 40px 70px;
     margin-bottom: 20px;    
 }
 footer {
-    border-top: 1px solid #333;
+    border-top: 1px solid #a2b4c1;
     box-sizing: border-box;
     height: 36px;
     margin-top: -36px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background:rgba(178, 201, 209, 0.89);
 }
 h1, h3 {
     text-align: center;
@@ -39,19 +41,75 @@ h1 {
 }
 nav ul {
     margin: 0;
+    padding: 0;
+    display: -webkit-flex; /* Safari */    
+    display: flex;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end; /* Safari */
+    justify-content: flex-end;
 }
-nav li {    
-    display: inline-block; 
-    list-style-type: none;    
+nav li {  
+    list-style-type: none;     
 }
 nav a {
-    text-decoration: none;    
-    color: #767676;
-    font-size: 17px;    
+    display: block;   
+    color: #29838c;  
+    background: rgba(173, 192, 206, .2); 
+    text-decoration: none;   
     text-transform: uppercase;
-    display: block;
-    padding: 10px 8px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);       
+    transition: .3s linear;     
 }
+nav > ul > li > a {
+    padding: 10px 18px;
+    font-size: 16px;    
+    letter-spacing: 2px;    
+    border-left: 1px solid #adc0ce;    
+}
+nav ul ul a {
+    padding: 8px 10px 6px;
+    font-size: 12px;
+}
+nav a:hover {
+    background: rgba(173, 192, 206, 0.6);
+}
+nav ul > li {
+  position: relative;
+}
+nav ul ul {
+    display: block;    
+    position: absolute;    
+    box-sizing: border-box;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    max-height: 0;
+    transform: translateY(100%);     
+    white-space: nowrap;
+    text-align: right;    
+/*    background:rgba(212, 231, 238, 0.4);*/
+    background: rgba(242, 244, 255, 0.56);
+    border-bottom: 1px solid #adc0ce; 
+    border-left: 1px solid #adc0ce; 
+    border-bottom-left-radius: 5px;
+    transition: .5s ease;
+}
+.nav-toggle:after {
+    content: ' ';
+    border: 4px solid;
+    border-color: #29838c transparent transparent transparent;
+    position: absolute;
+    top: 15px;
+    right: 6px; 
+    transition: .5s;
+}
+.nav-toggle:hover:after {
+    transform: scaleY(-1);
+}
+nav ul > li:hover ul{
+    max-height: 1000px;    
+}
+/*СТРАНИЦА ТОВАРА*/
 .shortDes h3, .char h3, .fullDes h3 {
     color: #000;
     font-size: 18px;
@@ -105,7 +163,8 @@ nav a {
     padding: 30px 25px;   
     border: 1px solid #a29f9f;
     border-radius: 5px;
-    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.2);   background:#efefef;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.2);   
+    background:rgba(212, 231, 238, 0.2);
     margin: 0 auto;
 }
 .feedback-form input, .feedback-form textarea, .feedback-form select {
@@ -175,7 +234,7 @@ input:required:invalid:not(:placeholder-shown):not(:focus) {
     color: inherit;
     text-decoration: none;
 }
-/*АДАПИТИВНОСТЬ*/
+/*АДАПТИВНОСТЬ*/
 @media screen and (max-width: 1024px) {
     main {padding: 0 20px;}       
 }
