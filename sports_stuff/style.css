@@ -1,11 +1,186 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-body {
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
+body {    
+    background: #f8f8f8;   
+}
+body, select, input, textarea {
     font-family: 'Open Sans', sans-serif;
+    color: #333; 
+}
+html, body, .wrapper {
+    height: 100%;
+}
+.content {
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 36px;
+}
+header {
+    border-bottom: 1px solid #333;
 }
 main {
-    padding: 0 40px;    
+    padding: 0 70px;
+    margin-bottom: 20px;    
 }
-nav li{
-    list-style-type: none;
-    display: inline-block;
+footer {
+    border-top: 1px solid #333;
+    box-sizing: border-box;
+    height: 36px;
+    margin-top: -36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1, h3 {
+    text-align: center;
+}
+h1 {
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+nav ul {
+    margin: 0;
+}
+nav li {    
+    display: inline-block; 
+    list-style-type: none;    
+}
+nav a {
+    text-decoration: none;    
+    color: #767676;
+    font-size: 17px;    
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 8px;
+}
+.shortDes h3, .char h3, .fullDes h3 {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400; /* и так по умолчаинию*/
+    background: #eaeaea;;
+}
+.shortDes {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+.fullDes {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;    
+}
+.char {
+    color: #40403a;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    list-style-image: url(img/marker.png);
+}
+.shortDes img {
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+/*КОНТАКТЫ*/
+
+#feedback, #address{
+    color: #6a6a6a;
+    font-size: 22px;
+}
+.feedback {
+    padding: 0 30px 50px;
+    margin-bottom: 15px;    
+}
+.address{
+    border: .5px dotted #ccc;
+    border-radius: 5px;
+    padding: 0 30px 50px;
+    background: #fafafa;
+}
+/*ФОРМА ОБРАТНОЙ СВЯЗИ*/
+.feedback-form {    
+    width: 500px;
+    padding: 30px 25px;   
+    border: 1px solid #a29f9f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.2);   background:#efefef;
+    margin: 0 auto;
+}
+.feedback-form input, .feedback textarea, .feedback select {
+    display: block;    
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 22px;
+}
+.feedback-form textarea, input[name="fb_name"], input[name="fb_email"] {    
+    padding: 0 3px;
+}
+.feedback-form textarea {
+    height: 200px;
+}
+input[name="fb_name"], input[name="fb_email"] {    
+    height: 32px;        
+}
+.feedback-form select {
+    background: white;
+    height: 32px;
+    font-size: 20px; 
+    margin-bottom: 10px;
+}
+.feedback-form > div{
+    padding-right: 8px;
+    margin-bottom: 12px;
+}
+.feedback-form input[type="reset"] {
+	padding: 5px;	
+    margin-bottom: 12px;	
+	background-color: #ff7272;
+	color: #fff;    
+}
+.feedback-form input[type="submit"] {	
+	padding: 10px;	
+	background-color: #ccc;
+	color: #fff;    
+}
+/*Валидация формы (для IE нужен js)*/
+.formError {
+    color: #ff7272;	
+	font-size: 12px;	
+	margin-top: 3px;
+	display: none;
+}
+input:required:invalid:not(:placeholder-shown):not(:focus) + .formError  {
+  	display: block;
+    color: #ff7272;
+}
+input:required:valid:not(:placeholder-shown):not(:focus) {
+    border-color: #333;    
+} 
+input:required:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #ff7272;    
+} 
+.feedback-form:valid input[type="submit"] {
+    background-color: #3b50ef;    
+}
+/*АДРЕС*/
+.map {
+    height: 374px;
+    width: 100%;
+    border: none;     
+}
+.address a {
+    color: inherit;
+    text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+    main {padding: 0 20px;}       
+}
+@media screen and (max-width: 768px) {
+    .address, .feedback {padding: 0 10px 30px;}    
+}
+@media screen and (max-width: 630px) {
+    .feedback-form {width: auto;}       
 }
