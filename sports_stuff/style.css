@@ -22,7 +22,7 @@ html, body, .wrapper {
 header {    
     background:rgba(212, 231, 238, 0.8);
     border-bottom: 1px solid #adc0ce; 
-    
+    height: 46px;    
 }
 main {
     padding: 40px 70px;
