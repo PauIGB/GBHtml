@@ -95,8 +95,7 @@ nav ul ul {
     max-height: 0;
     transform: translateY(100%);     
     white-space: nowrap;
-    text-align: right;    
-/*    background:rgba(212, 231, 238, 0.4);*/
+    text-align: right;
     background: rgba(242, 244, 255, 0.56);
     border-bottom: 1px solid #adc0ce; 
     border-left: 1px solid #adc0ce; 
@@ -158,23 +157,25 @@ nav ul > li:hover ul{
     text-align: left;
     list-style-image: url(img/marker.png);
 }
-.size {
-    border: 2px solid #333;
+.size {    
     margin: 0 auto;
     text-align: center;
-    border-collapse: collapse;    
+    border-collapse: collapse;  
 }
-.size td {
+.size, .size thead {
+    border: 2px solid #333;
+}
+.size td, .size th {
     border: 1px solid #333;
     padding: 1px 5px;
 }
-.size-name {
+.size caption {
     font-weight: bold;
-    height: 25px;
 }
-.size-head {
+thead tr {
     background: rgb(158, 181, 190);
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .size tbody tr:nth-child(even){
     background: #ededed;
