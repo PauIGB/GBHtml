@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
-body {    
+body, input, textarea, select {    
     background: #f8f8f8; 
 }
-body, select, input, textarea {
+body, select, input, textarea, select {
     font-family: 'Open Sans', sans-serif;
     color: #333; 
 }
@@ -17,6 +17,7 @@ html, body, .wrapper {
 header {    
     background:rgba(212, 231, 238, 0.8);
     border-bottom: 1px solid #adc0ce; 
+    height: 38px;
 }
 main {
     padding: 40px 70px;
@@ -27,9 +28,10 @@ footer {
     box-sizing: border-box;
     height: 36px;
     margin-top: -36px;
+    padding-right: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background:rgba(178, 201, 209, 0.89);
 }
 h1, h3 {
@@ -99,7 +101,7 @@ nav ul ul {
     border-bottom: 1px solid #adc0ce; 
     border-left: 1px solid #adc0ce; 
     border-bottom-left-radius: 5px;
-    transition: .5s ease;
+    transition: .6s ease-in-out;
 }
 .nav-toggle:after {
     content: ' ';
@@ -108,7 +110,7 @@ nav ul ul {
     position: absolute;
     top: 15px;
     right: 6px; 
-    transition: .5s;
+    transition: .5s ease;
 }
 .nav-toggle:hover:after {
     transform: scaleY(-1);
@@ -117,6 +119,18 @@ nav ul > li:hover ul{
     max-height: 1000px;    
 }
 /*СТРАНИЦА ТОВАРА*/
+.shortDes p:first-letter,
+.fullDes p:first-letter {
+    color: tomato;
+    font-size: 20px;
+    font-weight: bold;
+}
+.shortDes img {
+    outline: 1px solid #333;   
+}
+.shortDes img:hover {
+    outline: none;   
+}
 .shortDes h3, .char h3, .fullDes h3 {
     color: #000;
     font-size: 18px;
@@ -144,12 +158,28 @@ nav ul > li:hover ul{
     text-align: left;
     list-style-image: url(img/marker.png);
 }
-.shortDes img {
+.size {
+    border: 2px solid #333;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;    
+}
+.size td {
     border: 1px solid #333;
-    border-radius: 12px;
+    padding: 1px 5px;
+}
+.size-name {
+    font-weight: bold;
+    height: 25px;
+}
+.size-head {
+    background: rgb(158, 181, 190);
+    color: #fff;
+}
+.size tbody tr:nth-child(even){
+    background: #ededed;
 }
 /*КОНТАКТЫ*/
-
 #feedback, #address{
     color: #6a6a6a;
     font-size: 22px;
@@ -183,6 +213,15 @@ nav ul > li:hover ul{
 }
 .feedback-form textarea, input[name="fb_name"], input[name="fb_email"] {    
     padding: 0 3px;
+    text-transform: capitalize;
+}
+.feedback-form textarea:focus, 
+.feedback-form select:focus, 
+input[name="fb_name"]:focus, input[name="fb_email"]:focus {    
+    background: #fff;
+}
+input[name="fb_email"]:focus {    
+    color: rgb(6, 0, 152);
 }
 .feedback-form textarea {
     height: 200px;
@@ -190,8 +229,7 @@ nav ul > li:hover ul{
 input[name="fb_name"], input[name="fb_email"] {    
     height: 32px;        
 }
-.feedback-form select {
-    background: white;
+.feedback-form select {   
     height: 32px;
     font-size: 20px; 
     margin-bottom: 10px;
