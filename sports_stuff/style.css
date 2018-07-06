@@ -52,6 +52,7 @@ h1 {
     width: 185px;
     background: url(img/logo.png) no-repeat;
     margin-left: 70px;
+    margin-top: 4px;
 }
 nav ul {
     margin: 0;
@@ -75,7 +76,7 @@ nav a {
     transition: .3s linear;     
 }
 nav > ul > li > a {
-    padding: 10px 18px;
+    padding: 14px 18px;
     font-size: 16px;    
     letter-spacing: 2px;    
     border-left: 1px solid #adc0ce;    
