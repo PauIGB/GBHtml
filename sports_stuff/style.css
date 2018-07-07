@@ -11,6 +11,11 @@ body, select, input, textarea, select {
     font-family: 'Open Sans', sans-serif;
     color: #333; 
 }
+.clearFix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
 html, body, .wrapper {
     height: 100%;
 }
@@ -20,16 +25,20 @@ html, body, .wrapper {
     padding-bottom: 36px;
 }
 header {    
-    background:rgba(212, 231, 238, 0.8);
+/*    background:rgba(212, 231, 238, 0.8);*/
+    background: url(img/head_bg_pat.png);
     border-bottom: 1px solid #adc0ce; 
     height: 46px;    
 }
 main {
-    padding: 40px 70px;
-    margin-bottom: 20px;    
+    padding: 40px 100px;
+    margin-bottom: 20px; 
+    max-width: 1366px;
+    margin: 0 auto;
 }
 footer {
-    border-top: 1px solid #a2b4c1;
+/*    border-top: 1px solid #a2b4c1;*/
+    border-top: 1px solid #6894b4;
     box-sizing: border-box;
     height: 36px;
     margin-top: -36px;
@@ -37,7 +46,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background:rgba(178, 201, 209, 0.89);
+/*    background:rgba(178, 201, 209, 0.89);*/
+    background: url(img/foot_bg_pat.png);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 h1, h3 {
     text-align: center;
@@ -45,6 +56,7 @@ h1, h3 {
 h1 {
     text-shadow: 2px 3px 6px rgba(0,0,0,0.2),
                  0px -5px 35px rgba(255,255,255,0.3);
+    padding: 25px 0;
 }
 .logo {
     float: left;
@@ -113,7 +125,7 @@ nav ul ul {
     border: 4px solid;
     border-color: #29838c transparent transparent transparent;
     position: absolute;
-    top: 15px;
+    top: 18px;
     right: 6px; 
     transition: .5s ease;
 }
@@ -123,48 +135,127 @@ nav ul ul {
 nav ul > li:hover ul{
     max-height: 1000px;    
 }
+.catalog {   
+    display: flex;
+    justify-content: space-around;
+}
+.catalog a {    
+    width: 260px;
+    height: 300px;
+    display: block;  
+    background: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;   
+    transition: .5s;
+}
+.catalog a:hover {   
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2); 
+    border: none;
+}
+.catalog img {
+    width: 86%; 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 6px;
+}
+.catalog figure {
+    margin: 10px 0 0 0;
+    text-align: center;
+}
 /*СТРАНИЦА ТОВАРА*/
-.shortDes p:first-letter,
-.fullDes p:first-letter {
-    color: tomato;
-    font-size: 20px;
-    font-weight: bold;
+.shortDes {    
+    display: flex;
+    justify-content: space-around;
 }
 .shortDes img {
-    outline: 1px solid #333;   
+    width: 520px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);    
 }
-.shortDes img:hover {
-    outline: none;   
+.orderInfo {        
+    padding: 10px 0 10px 50px;
+    width: 550px;
+    box-sizing: border-box;
+    text-align: right;
 }
-.shortDes h3, .char h3, .fullDes h3 {
-    color: #000;
-    font-size: 18px;
-    font-weight: 400; /* и так по умолчаинию*/
-    background: #eaeaea;;
-}
-.shortDes {
+.orderInfo p {
     color: #707070;
-    font-size: 14px;
+    font-size: 18px;    
     font-style: italic;
-    line-height: 16px;
 }
-.fullDes {
-    color: #484343;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;    
+.orderForm select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 40;    
 }
-.char {
-    color: #40403a;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-    list-style-image: url(img/marker.png);
+.price {
+    font-size: 40px;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #ab2328;
+    padding: 30px 0;
+}
+.sizeOpt {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.numberOpt {
+    padding: 5px 15px 5px 10px;    
+}
+.orderForm input[type="submit"] {
+    display: inline-block;
+    height: 50px;
+    width: 256px;
+    border: none;
+    border-radius: 5px;
+    background: #3b50ef;
+    color: #fff;
+    font-size: 26px;
+    text-transform: uppercase;   
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;    
+    transition: .5s;
+}
+.orderForm input[type="submit"]:hover {
+    background: #485dfc;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.orderForm input[type="submit"]:active {
+    background: #485dfc;
+    box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.hide {
+    display: none;
+}        
+.toggle {
+    cursor: pointer;    
+}
+.toggle:after {
+    content: 'Таблица размеров';
+    cursor: pointer;
+    color: #08f;
+    font-size: 18px;
+    font-family: monospace;
+    text-decoration: underline; 
+    letter-spacing: 2px;    
+}
+.toggle:hover:after {
+    text-decoration: none;
+}
+#sizeBox:checked + .toggle:after {
+    content: 'Cвернуть';
+}
+#sizeBox:checked ~ .sizeBox {
+    display: block;
 }
 .size {    
-    margin: 0 auto;
+    margin: 10px auto 0;
     text-align: center;
     border-collapse: collapse;  
 }
@@ -186,6 +277,18 @@ thead tr {
 .size tbody tr:nth-child(even){
     background: #ededed;
 }
+.fullDes {
+    color: #484343;
+    font-size: 16px;    
+    line-height: 24px;      
+}
+.char {
+    color: #40403a;
+    font-size: 15px;
+    line-height: 20px;
+    list-style-image: url(img/marker.png);
+}
+
 /*КОНТАКТЫ*/
 #feedback, #address{
     color: #6a6a6a;
@@ -219,8 +322,7 @@ thead tr {
     font-size: 22px;
 }
 .feedback-form textarea, input[name="fb_name"], input[name="fb_email"] {    
-    padding: 0 3px;
-    text-transform: capitalize;
+    padding: 0 3px;   
 }
 .feedback-form textarea:focus, 
 .feedback-form select:focus, 

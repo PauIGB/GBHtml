@@ -26,12 +26,74 @@
             </header>  
             <main>  
                 <h1>ТАЙТСЫ COMBAT</h1>
-                <section class="shortDes">
-                    <h3>Описание товара</h3>
-                    <a href="../img/ti.jpg" target="_blank"><img src="../img/ti.jpg" alt="tight" title="Тайтсы Combat" height="400"></a>  
-                    <!--        Текст краткого описания товара    -->      
-                    <p>Тайтсы для единоборств</p>
-                    <span>Цена: 4&nbsp;390&nbsp;&#8381;</span>
+                <section class="shortDes clearFix">                   
+                    <div class="image">
+                        <a href="../img/ti.jpg" target="_blank"><img src="../img/ti.jpg" alt="tight" title="Тайтсы Combat"></a>
+                    </div>  
+                          
+                    <div class="orderInfo">
+                        <p><strong>Taйтсы combat</strong><br>тайтсы для единоборств</p>
+                        <div>Артикул 003</div>
+                        <div class="price">Цена: 4&nbsp;390&nbsp;&#8381;</div>
+                        <form action="#" class="orderForm" name="a003">                        
+                            <select name="sizeOpt" class="sizeOpt" required>
+                                <option value="" disabled selected>Выбрать размер</option>
+                                <option value="s">S(46)</option>
+                                <option value="m">M(50)</option>
+                                <option value="l">L(54)</option>
+                                <option value="xl">XL(58)</option>               
+                            </select>
+                            <select name="numberOpt" class="numberOpt">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option> 
+                                <option value="5">5</option>
+                            </select><br>
+                            <input type="submit" value="купить">                                                         
+                        </form>  
+                        <input type="checkbox" id="sizeBox" class="hide">
+                        <label class="toggle" for="sizeBox"></label><br>
+                        <div class="sizeBox hide">
+                            <table class="size">
+                                <caption>Таблица размеров одежды (для мужчин)</caption>
+                                <thead>                            
+                                    <tr>
+                                        <td>Размер</td>
+                                        <td>Обхват груди, см</td>
+                                        <td>Обхват талии, см</td>
+                                        <td>Обхват бедер, см</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>S(46)</th>
+                                        <td>92</td>
+                                        <td>80</td>
+                                        <td>91</td>
+                                    </tr>
+                                    <tr>
+                                        <th>M(50)</th>
+                                        <td>100</td>
+                                        <td>88</td>
+                                        <td>99</td>
+                                    </tr>
+                                    <tr>
+                                        <th>L(54)</th>
+                                        <td>108</td>
+                                        <td>96</td>
+                                        <td>107</td>
+                                    </tr>
+                                    <tr>
+                                        <th>XL(58)</th>
+                                        <td>118</td>
+                                        <td>106</td>
+                                        <td>116</td>
+                                    </tr>                                     
+                                </tbody>                        
+                            </table>
+                        </div>       
+                    </div>
                 </section>
                 <section class="char">
                     <h3>Характеристики товара</h3>
