@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INTERIOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav_bar">      
+                <a href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
+                <ul class="menu">
+                    <li class="current_page"><a title="HOME" href="#">HOME</a></li><!-- прописываем title для  .menu li a:after-->
+                    <li><a title="PRODUCTS" href="#">PRODUCTS</a></li>
+                    <li><a title="HISTORY" href="#">HISTORY</a></li>
+                    <li><a title="SHOWROOM" href="#">SHOWROOM</a></li>
+                    <li><a title="CONTACT" href="#">CONTACT</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#"><svg width="23px" height="23px" viewBox="0 0 23 23"> <path id="search" fillRule="evenodd" d="M 9.55 0.5C 8.33 0.5 7.16 0.74 6.04 1.23 4.93 1.7 3.97 2.33 3.18 3.13 2.38 3.94 1.74 4.9 1.25 6.01 0.79 7.12 0.55 8.28 0.55 9.5 0.55 10.72 0.79 11.88 1.25 12.99 1.74 14.1 2.38 15.06 3.18 15.88 3.97 16.67 4.93 17.31 6.04 17.8 7.16 18.27 8.33 18.5 9.55 18.5 10.6 18.5 11.6 18.33 12.55 17.98 13.5 17.64 14.37 17.16 15.15 16.53 15.15 16.53 20.82 22.2 20.82 22.2 21.03 22.41 21.27 22.51 21.55 22.51 21.83 22.51 22.07 22.41 22.25 22.2 22.44 22.02 22.54 21.78 22.54 21.5 22.54 21.22 22.44 20.98 22.25 20.8 22.25 20.8 16.58 15.12 16.58 15.12 17.21 14.34 17.69 13.47 18.04 12.5 18.38 11.55 18.55 10.55 18.55 9.5 18.55 8.28 18.31 7.12 17.82 6.01 17.36 4.9 16.71 3.94 15.9 3.13 15.11 2.33 14.15 1.7 13.04 1.23 11.93 0.74 10.77 0.5 9.55 0.5 9.55 0.5 9.55 0.5 9.55 0.5ZM 9.55 2.49C 10.49 2.49 11.39 2.68 12.27 3.05 13.13 3.43 13.87 3.93 14.5 4.55 15.12 5.18 15.62 5.92 16 6.78 16.36 7.64 16.54 8.55 16.54 9.5 16.54 10.45 16.36 11.36 16 12.22 15.62 13.08 15.12 13.82 14.5 14.45 13.87 15.07 13.13 15.57 12.27 15.95 11.39 16.32 10.49 16.51 9.55 16.51 8.6 16.51 7.69 16.32 6.83 15.95 5.96 15.57 5.21 15.07 4.58 14.45 3.96 13.82 3.46 13.08 3.11 12.22 2.73 11.36 2.54 10.45 2.54 9.5 2.54 8.55 2.73 7.64 3.11 6.78 3.46 5.92 3.96 5.18 4.58 4.55 5.21 3.93 5.96 3.43 6.83 3.05 7.69 2.68 8.6 2.49 9.55 2.49 9.55 2.49 9.55 2.49 9.55 2.49Z" fill="#8c8c8c"/></svg></a><!-- Картинка в формате svg (позволяет поменять цвет картинки при помощи fill-->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>  
+            <!-- КНОПКИ ДЛЯ СЛАЙДЕРА/ LABEL К КНОПКАМ ВНИЗУ КАЖДОГО СЛАЙДЕРА -->
+            <input type="radio" id="s_but1" name="s_but">
+            <input type="radio" id="s_but2" name="s_but" checked>
+            <input type="radio" id="s_but3" name="s_but">             
+            <div class="slider">
+                <div class="text">
+                    <h3>TRENDING</h3>                    
+                    <h1>FISHNET&nbsp;&nbsp;CHAIR</h1>
+                    <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
+                    <a href="#">ORDER US</a>
+                </div>
+                                        
+                <ul class="slider_sw">
+                    <li><label for="s_but1"><span></span></label></li>
+                    <li><label for="s_but2"><span></span></label></li>
+                    <li><label for="s_but3"><span></span></label></li>
+                </ul>
+            </div>                                              
+        </div>
+        <div class="content">
+            <div class="featured">
+                <ul class="tab_ctrl">
+                    <li><input type="radio" id="f_but1" name="f_but" checked>                    
+                    <label for="f_but1">Featured</label>
+                    </li>
+                    <li><input type="radio" id="f_but2" name="f_but">
+                        <label for="f_but2">New</label>
+                    </li>
+                </ul>
+                <a class="btn" href="#">explore all</a>           
+                <div class="block">
+                    <div class="block_in">
+                        <img src="img/product-1.jpg" alt="prod1">
+                        <div class="cover_bg"></div>
+                        <div class="hover_cont">
+                            <a href="#"></a>
+                            <h4>Fishnet Chair</h4>
+                            <p>Seat and back with upholstery made of cold cure foam.</p>
+                        </div>
+                    </div>
+                    <div class="block_in">
+                        <img src="img/product-2.jpg" alt="prod2">
+                        <div class="cover_bg"></div>
+                        <div class="hover_cont">
+                            <a href="#"></a>
+                            <h4>Fishnet Chair</h4>
+                            <p>Seat and back with upholstery made of cold cure foam.</p>
+                        </div>
+                    </div>
+                    <div class="block_in">
+                        <img src="img/product-3.jpg" alt="prod3">
+                        <div class="cover_bg"></div>
+                        <div class="hover_cont">
+                            <a href="#"></a>
+                            <h4>Fishnet Chair</h4>
+                            <p>Seat and back with upholstery made of cold cure foam.</p>
+                        </div>
+                    </div>
+                    <div class="block_in">
+                        <img src="img/product-4.jpg" alt="prod4">
+                        <div class="cover_bg"></div>
+                        <div class="hover_cont">
+                            <a href="#"></a>
+                            <h4>Fishnet Chair</h4>
+                            <p>Seat and back with upholstery made of cold cure foam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo">
+                <div class="promo1">
+                    <div class="ex_tbox">
+                        <h3>exclusive</h3>
+                        <h2>Fishnet Chair</h2>
+                        <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
+                        <a href="#">ORDER US</a>
+                    </div>    
+                </div>
+                <div class="promo2">
+                    <div class="ex_tbox">
+                        <h3>exclusive</h3>
+                        <h2>Fishnet Chair</h2>
+                        <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
+                        <a href="#">ORDER US</a>
+                    </div>               
+                </div>
+            </div>
+            <div class="trending">
+                <h3>Trending Products</h3>
+                <a class="btn" href="#">explore all</a>
+                <div class="trend_img">
+                <a href="img/product-11.jpg" target="_blank"><img src="img/product-11.jpg" alt="pr11"></a>
+                <a href="img/product-21.jpg" target="_blank"><img src="img/product-21.jpg" alt="pr21"></a>
+                <a href="img/product-31.jpg" target="_blank"><img src="img/product-31.jpg" alt="pr31"></a>
+                <a href="img/product-41.jpg" target="_blank"><img src="img/product-41.jpg" alt="pr41"></a>
+                <a href="img/product-5.jpg" target="_blank"><img src="img/product-5.jpg" alt="pr5"></a>
+                <a href="img/product-6.jpg" target="_blank"><img src="img/product-6.jpg" alt="pr6"></a>    
+            </div>                  
+            </div>
+            <!-- КНОПКИ ДЛЯ СЛАЙДЕРА/ LABEL К КНОПКАМ ВНИЗУ КАЖДОГО СЛАЙДЕРА -->
+                <input type="radio" id="s2_but1" name="s_but2">
+                <input type="radio" id="s2_but2" name="s_but2" checked>
+                <input type="radio" id="s2_but3" name="s_but2">             
+            <div class="slider2">
+                <div class="text">
+                    <h3>Hot deal</h3>                    
+                    <h2>FISHNET&nbsp;&nbsp;CHAIR</h2>
+                    <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
+                    <a href="#">ORDER US</a>
+                </div>
+                                        
+                <ul class="slider_sw">
+                    <li><label for="s2_but1"><span></span></label></li>
+                    <li><label for="s2_but2"><span></span></label></li>
+                    <li><label for="s2_but3"><span></span></label></li>
+                </ul>
+            </div>
+            <div class="exclusive2">
+                <div class="ex2_block1">
+                    <div class="ex2_tbox">
+                        <h3>exclusive</h3>
+                        <h2>Fishnet Chair</h2>
+                        <p>Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p>
+                        <a href="#">ORDER US</a>
+                    </div>
+                </div>
+                <div class="ex2_block2">
+                    <a href="img/product-2-sm.jpg" target="_blank"><img src="img/product-2-sm.jpg" alt="pr2sm"></a>
+                    <a href="img/product-3-sm.jpg" target="_blank"><img src="img/product-3-sm.jpg" alt="pr3sm"></a>
+                    <a href="img/product-4-sm.jpg" target="_blank"><img src="img/product-4-sm.jpg" alt="pr4sm"></a>
+                    <a href="img/product-5-sm.jpg" target="_blank"><img src="img/product-5-sm.jpg" alt="pr5sm"></a>
+                </div>
+            </div>
+            <div class="mobile_app">
+                <div class="mob_tbox">
+                    <h3>mobile app</h3>
+                    <h2>Find. Follow. <br>Favorite.</h2>
+                    <p>Save your favorites and share your style.</p>
+                    <a href="#"><img src="img/app-store.png" alt="app_st"></a>
+                    <a href="#"><img src="img/google-play.png" alt="g_play"></a>
+                </div>                
+            </div>            
+        </div>
+        <div class="footer">
+            <div class="cont">
+                <h3>Contact Us</h3>
+                <p>132A Bridge Road Richmond VIC Australia. <br><br>Talk to us on 1300 132 info@interior.com</p>
+            </div>
+            <div class="usef">
+                <h3>Useful Information</h3>
+                <div class="link">
+                    <a href="#">Sales terms</a><br>
+                    <a href="#">Customer care</a><br>
+                    <a href="#">Delivery</a>
+                </div>
+                <div class="link link2">
+                    <a href="#">Architect accounts</a><br>
+                    <a href="#">Careers</a><br>
+                    <a href="#">Exchanges & returns</a>
+                </div>
+
+            </div>
+            <div class="intouch">
+                <h3>Let&rsquo;s Stay in&nbsp;Touch!</h3>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <input type="text" name="email" placeholder="your email address">
+                <a href="#"><img src="img/letter%20plane.svg" alt="join"></a>
+            </div>
+            <div class="bottom">
+                <span>&copy;&nbsp;Copyright&nbsp;&mdash; INTERIOR 2018. All Rights Reserved.</span>
+                <div class="icons">
+                    <a href="#"><img src="img/fb.png" alt="fb"></a>
+                    <a href="#"><img src="img/twitter.png" alt="tw"></a>
+                    <a href="#"><img src="img/google.png" alt="ggl"></a>
+                    <a href="#"><img src="img/p.png" alt="p"></a>
+                </div>
+                <span>Terms &amp;&nbsp;Conditions&nbsp;&nbsp;/ Privacy policy&nbsp;&amp;&nbsp;&nbsp;Cookies</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
