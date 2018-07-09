@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
-.container {
-    width: 1366px;
-    margin: 0 auto;
-    height: 100%;
-}
 body, input, textarea, select {    
     background: #f8f8f8; 
 }
@@ -28,7 +23,6 @@ header {
 /*    background:rgba(212, 231, 238, 0.8);*/
     background: url(img/head_bg_pat.png);
     border-bottom: 1px solid #adc0ce; 
-    height: 46px;    
 }
 main {
     padding: 40px 100px;
