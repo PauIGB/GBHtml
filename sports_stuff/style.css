@@ -25,7 +25,7 @@ header {
     border-bottom: 1px solid #adc0ce; 
 }
 main {
-    padding: 40px 100px;
+    padding: 2% 8%;
     margin-bottom: 20px; 
     max-width: 1366px;
     margin: 0 auto;
@@ -61,7 +61,7 @@ h1.main strong {
     height: 38px;
     width: 185px;
     background: url(img/logo.png) no-repeat;
-    margin-left: 70px;
+    margin-left: 4%;
     margin-top: 4px;
 }
 nav ul {
@@ -131,14 +131,13 @@ nav ul > li:hover ul{
     max-height: 1000px;    
 }
 .greeting p {
-    text-indent: 20px;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
+    text-indent: 20px;    
     hyphens: auto;
 }
 .catalog {   
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;    
 }
 .catalog a {    
     width: 260px;
@@ -149,6 +148,7 @@ nav ul > li:hover ul{
     text-decoration: none;
     color: inherit;   
     transition: .5s;
+    margin: 2% 1%;
 }
 .catalog a:hover {   
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2); 
@@ -166,15 +166,18 @@ nav ul > li:hover ul{
 /*СТРАНИЦА ТОВАРА*/
 .shortDes {    
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .shortDes img {
     width: 520px;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);    
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2); 
+    margin: 0 auto;
 }
 .orderInfo {        
-    padding: 10px 0 10px 50px;
+    padding: 10px 10px 10px 50px;
+    margin: 0 auto;
     width: 550px;
     box-sizing: border-box;
     text-align: right;
@@ -391,8 +394,8 @@ input:required:invalid:not(:placeholder-shown):not(:focus) {
 }
 /*АДАПТИВНОСТЬ*/
 @media screen and (max-width: 1024px) {
-    main {padding: 0 20px;} 
-    .logo {margin-left: 20px;}
+    .shortDes img {width: 100%;}
+    .orderInfo {width: 100%;}
 }
 @media screen and (max-width: 768px) {
     .address, .feedback {padding: 0 10px 30px;}   
@@ -403,5 +406,5 @@ input:required:invalid:not(:placeholder-shown):not(:focus) {
     nav ul {display: block;}
     nav ul ul {width: 100%; text-align: left; border-radius: 0; border: none;}
     nav ul ul a {padding: 10px 19px 10px;}
-    nav ul a {border-bottom: 1px solid #adc0ce;}
+    nav ul a {border-bottom: 1px solid #adc0ce;}    
 }
