@@ -80,7 +80,8 @@ nav a {
     text-decoration: none;   
     text-transform: uppercase;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);       
-    transition: .3s linear;     
+    transition: .3s linear;  
+    transition-property: background;
 }
 nav > ul > li > a {
     padding: 14px 18px;
@@ -223,6 +224,7 @@ nav ul > li:hover ul{
     margin-top: 20px;
     margin-bottom: 30px;    
     transition: .5s;
+    transition-property: background, box-shadow, text-shadow; 
 }
 .orderForm input[type="submit"]:hover {
     background: #485dfc;
